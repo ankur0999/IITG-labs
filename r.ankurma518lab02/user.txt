@@ -1,0 +1,5 @@
+{
+  "username" : "Ashok Singh Sairam",
+  "email": "ashoksingh@iitg.ac.in",
+  "password": "KaiPoiChe23"
+}
