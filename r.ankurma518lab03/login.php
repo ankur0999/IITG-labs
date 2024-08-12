@@ -17,12 +17,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $userData = findUser($username);
 
     if ($userData && password_verify($password, $userData['password'])) {
-        if ($userData['first_login']) {
-            header("Location: home.html?username=" . urlencode($username));
+        
+            header("Location: reset_password.php?username=" . urlencode($username));
             exit();
-        } else {
-            echo "Login successful!";
-        }
+        
+            
+
+        
     } else {
         echo "Invalid username or password.";
     }
@@ -51,11 +52,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <div class="name">Ashok Singh Sairam</div>
+        </ul>
+        <ul class="navbar-list">
+            
+            <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
+            <li class="navbar-item"><a href="publication_nat.html" class="navbar-link">Publication</a></li>
+            <li class="navbar-item"><a href="#" class="navbar-link">Student</a></li>
+            <li class="navbar-item"><a href="#" class="navbar-link">Project</a></li>
+            <li class="navbar-item_h"><a href="#" class="navbar-link_h">Edit Profile</a></li>
+        </ul>
+    </nav>
     
     
     <div class="body">
     <div class="login-container">
-        <form action="index.php" method="post" class="login-form">
+        <form action="login.php" method="post" class="login-form">
             <h2></h2>
             
             
