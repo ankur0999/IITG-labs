@@ -40,10 +40,10 @@ $userData = findUser($queries['username']);
         <ul class="navbar-list">
             
             
-            <li class="navbar-item"><a href="publication_nat.html" class="navbar-link">Publication</a></li>
+            <li class="navbar-item"><a href="publication.php" class="navbar-link">Publication</a></li>
             <li class="navbar-item"><a href="#" class="navbar-link">Student</a></li>
             <li class="navbar-item"><a href="#" class="navbar-link">Project</a></li>
-            <li class="navbar-item"><a href="login.php" class="navbar-link">Edit Profile</a></li>
+            <li class="navbar-item"><a href="edit_profile.php" class="navbar-link">Edit Profile</a></li>
         </ul>
     </nav>
 
