@@ -10,9 +10,10 @@ function findUser($username) {
     }
     return null;
 }
+if(isset($_SERVER['QUERY_STRING'])){
 $queries = array();
 parse_str($_SERVER['QUERY_STRING'], $queries);
-
+if(isset($queries['username'])){
 $userData = findUser($queries['username']);
 
     if ($userData) {
@@ -21,7 +22,8 @@ $userData = findUser($queries['username']);
             exit();
         }
     } 
-
+}
+}
 ?>
 
 <!DOCTYPE html>
